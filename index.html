@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="ar"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"> 
+    <title>Document</title> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+     
+    <style> 
+    @media (min-width: 640px) {
+            .nav-toggle {
+                display: none;
+            }
+        }
+    * { 
+        font-family: "cairo", sans-serif; 
+    } 
+    </style> 
+</head> 
+ 
+<body class="bg-zinc-950 text-white"> 
+ 
+    <header class="flex sm:flex-col items-end"> 
+        <div class=" justify-around flex w-90 bg-gray-900 w-10/12 pt-5 m-auto h-16 rounded-b-xl m-auto text-center hidden min-[640px]:flex  "> 
+            <div>  
+                <a href="#main">الرئيسية</a> 
+            </div> 
+            <div> 
+                <a href="#skillz">المهارات</a> 
+ 
+            </div> 
+            <div> 
+                <a href="#contactme">تواصل</a> 
+                
+                
+            </div> 
+            
+            
+ 
+        </div> 
+        <div class="flex  flex-col sm:hidden ">
+    <div class="nav-toggle">
+        <button onclick="toggleMenu()" class="text-white bg-gray-900 flex flex-col">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+            </svg>
+        </button>
+    </div>
+    <div class="nav-links hidden sm:block">
+        <div>  
+            <a href="#main">الرئيسية</a> 
+        </div> 
+        <div> 
+            <a href="#skillz">المهارات</a> 
+        </div> 
+        <div> 
+            <a href="#contactme">تواصل</a> 
+        </div> 
+    </div>
+</div>
+    </header> 
+ 
+    <div class="grid md:grid-cols-2  m-10  justify-around content-center flex ml-20" id="main"> 
+        <div> 
+            <h1 class="flex font-bold justify-around mt-20">إسماعيل الساعدي</h1> 
+            <p class="font-light flex justify-around mt-10 text-center">طالب في كلية التقنية الإلكترونية طرابلس, قسم الحاسب الالي, خبرة 10 سنين فالتعامل مع الكمبيوتر , متوسط في البرمجة. </p>
+           
+        </div> 
+        <div>
+            <img src="images/images.jpeg" alt="moonSkeleton" class="rounded-full m-auto flex"> <!-- rounded-full makes the borders into a full cicrle using tailwindcss-->
+        </div>
+
+    </div> 
+
+    <div class="flex-col justify-center mt-20 m-10" id="skillz">
+
+        <h1 class="font-bold text-center">المهارات</h1>
+        <p class="font-light text-center">المهارات التي اكتسبتها خلال الفترة الدراسية</p>
+
+        <section class="mx-auto experience mt-20" id="experiences" >
+        
+            <div class="grid md:grid-cols-2 md:grid-cols-1  sm:grid-cols-1 gap-8">
+             <div class="text-center">
+                 <h1 class="text-2xl font-bold mb-4">Backend Development</h1>
+                    <div class="grid  md:grid-cols-2 sm:grid-cols-1 gap-4 rounded-lg border border-gray-400 p-5 ">
+                     <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>Java</h3>
+                        <p class="text-xs">متوسط</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>SQLserver</h3>
+                        <p class="text-xs">متوسط</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>Git</h3>
+                        <p class="text-xs">مبتدئ</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>Python</h3>
+                        <p class="text-xs">مبتدئ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="text-2xl font-bold mb-4">Frontend Development</h1>
+                <div class="grid md:grid-cols-3 gap-20 rounded-lg border border-gray-400 p-5">
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>CSS</h3>
+                        <p class="text-xs">مبتدئ</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>HTML</h3>
+                        <p class="text-xs">مبتدئ</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>JavaScript</h3>
+                        <p class="text-xs">مبتدئ</p>
+                    </div>
+                    <div class="text-center flex flex-col items-center">
+                        <img src="./image/checkmark.png" alt="" class="w-9">
+                        <h3>Tailwindcss</h3>
+                        <p class="text-xs">مبتدئ</p>
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="./image/checkmark.png" alt="" class="w-9">
+                               <h3>Material UI</h3>
+                            <p class="text-xs">مبتدئ</p>
+                        </div>
+                            <div class="text-center flex flex-col items-center">
+                                 <img src="./image/checkmark.png" alt="" class="w-9">
+                                 <h3>TypeScript</h3>
+                                <p class="text-xs">مبتدئ</p>
+                            </div>
+                      </div>
+                    </div>
+        </div>
+        </section>
+
+        
+
+    </div>
+    <div class="flex flex-col justify-center md:mt-20 m-5" id="contactme">
+        <h1 class="font-bold text-center">تواصل معي</h1>
+        <div class="flex flex-col md:flex-row items-center gap-1 justify-center rounded-lg border border-gray-300 md:mx-20 my-5 md:my-20 mb-0 p-4">
+            <div class="flex items-center">
+                <img src="image/email.png" alt="email" class="h-10">
+                <p class="ml-2">esmailsaadi@gmail.com</p>
+            </div>
+            <div class="flex items-center mt-2 md:mt-0">
+                <img src="image/email.png" alt="email" class="h-10 mr-2">
+                <a href="https://t.me/trapped133">Telegram: t.me/trapped133</a>
+            </div>
+            <div class="mt-2 md:mt-0 ">
+                <a href="https://www.facebook.com/trappedjr" target="_blank" class="inline-block">
+                    <img src="image/image copy.png" alt="facebook" class="w-8 mr-2">
+                </a>
+            </div>
+        </div>
+    </div>
+
+        
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('hidden');
+        }
+</script>
+</body> 
+ 
+ 
+ 
+</html>
