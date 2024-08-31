@@ -4,179 +4,231 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"> 
-    <title>Document</title> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>إسماعيل الساعدي | ملف شخصي</title> 
     <script src="https://cdn.tailwindcss.com"></script> 
      
     <style> 
-    @media (min-width: 640px) {
-            .nav-toggle {
-                display: none;
-            }
+        :root {
+            --background-color: #1c1c1c;
+            --text-color: #fff;
+            --header-background: #333;
+            --card-background: #2b2b2b;
+            --border-color: #333;
+            --link-hover-color: #f39c12;
         }
-    * { 
-        font-family: "cairo", sans-serif; 
-    } 
+
+        .light-mode {
+            --background-color: #f0f0f0;
+            --text-color: #1c1c1c;
+            --header-background: #fff;
+            --card-background: #fff;
+            --border-color: #ddd;
+            --link-hover-color: #007bff;
+        }
+
+        * { 
+            font-family: 'Cairo', sans-serif; 
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        header {
+            background: var(--header-background);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--link-hover-color);
+        }
+
+        h1, h2 {
+            color: var(--link-hover-color);
+        }
+
+
+        img {
+            border: 5px solid var(--link-hover-color);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 3rem;
+            color: var(--link-hover-color);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        footer {
+            background: var(--background-color);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            color: var(--text-color);
+            margin: 0;
+        }
     </style> 
 </head> 
  
-<body class="bg-zinc-950 text-white"> 
- 
-    <header class="flex sm:flex-col items-end"> 
-        <div class=" justify-around flex w-90 bg-gray-900 w-10/12 pt-5 m-auto h-16 rounded-b-xl m-auto text-center hidden min-[640px]:flex  "> 
-            <div>  
-                <a href="#main">الرئيسية</a> 
-            </div> 
-            <div> 
-                <a href="#skillz">المهارات</a> 
- 
-            </div> 
-            <div> 
-                <a href="#contactme">تواصل</a> 
-                
-                
-            </div> 
-            
-            
- 
-        </div> 
-        <div class="flex  flex-col sm:hidden ">
-    <div class="nav-toggle">
-        <button onclick="toggleMenu()" class="text-white bg-gray-900 flex flex-col">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-            </svg>
-        </button>
-    </div>
-    <div class="nav-links hidden sm:block">
-        <div>  
-            <a href="#main">الرئيسية</a> 
-        </div> 
-        <div> 
-            <a href="#skillz">المهارات</a> 
-        </div> 
-        <div> 
-            <a href="#contactme">تواصل</a> 
-        </div> 
-    </div>
-</div>
-    </header> 
- 
-    <div class="grid md:grid-cols-2  m-10  justify-around content-center flex ml-20" id="main"> 
-        <div> 
-            <h1 class="flex font-bold justify-around mt-20">إسماعيل الساعدي</h1> 
-            <p class="font-light flex justify-around mt-10 text-center">طالب في كلية التقنية الإلكترونية طرابلس, قسم الحاسب الالي, خبرة 10 سنين فالتعامل مع الكمبيوتر , متوسط في البرمجة. </p>
-           
-        </div> 
-        <div>
-            <img src="images/images.jpeg" alt="moonSkeleton" class="rounded-full m-auto flex"> <!-- rounded-full makes the borders into a full cicrle using tailwindcss-->
+<body> 
+
+    <header class="flex sm:flex-col items-center py-5 fixed top-0 w-full z-10 " >
+        <div class="w-full flex justify-center ">
+            <nav class="flex justify-around w-10/12 md:w-8/12 max-w-screen-lg text-lg ">
+                <a href="#main">الرئيسية</a>
+                <a href="#skillz">المهارات</a>
+                <a href="#contactme">تواصل</a>
+            </nav>
+            <button id="theme-toggle" class="ml-4 text-xl">
+                <i id="theme-icon" class="fa-solid fa-sun"></i>
+            </button>
         </div>
+    </header> 
 
-    </div> 
+    <main class="grid md:grid-cols-2 gap-5 p-5 m-auto mt-44 max-w-screen-lg text-center md:text-right " dir="rtl" id="main">
+        <div>
+            <h1 class="text-3xl font-bold mb-1">إسماعيل الساعدي</h1>  
+            <p class="text-lg ">طالب في كلية التقنية الإلكترونية طرابلس, قسم الحاسب الآلي, خبرة 10 سنوات في التعامل مع الكمبيوتر, متوسط في البرمجة.</p>
+        </div> 
+        <div class="flex justify-center mt-10">
+            <img src="images/images.jpeg" alt="إسماعيل الساعدي">
+        </div>
+    </main> 
 
-    <div class="flex-col justify-center mt-20 m-10" id="skillz">
-
-        <h1 class="font-bold text-center">المهارات</h1>
-        <p class="font-light text-center">المهارات التي اكتسبتها خلال الفترة الدراسية</p>
-
-        <section class="mx-auto experience mt-20" id="experiences" >
-        
-            <div class="grid md:grid-cols-2 md:grid-cols-1  sm:grid-cols-1 gap-8">
-             <div class="text-center">
-                 <h1 class="text-2xl font-bold mb-4">Backend Development</h1>
-                    <div class="grid  md:grid-cols-2 sm:grid-cols-1 gap-4 rounded-lg border border-gray-400 p-5 ">
-                     <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>Java</h3>
-                        <p class="text-xs">متوسط</p>
+    <section class="flex flex-col items-center mt-20 m-10" id="skillz">
+        <h2 class="text-3xl font-bold mb-10">المهارات</h2>
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4">Backend Development</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-java icon"></i>
+                        <p>Java</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>SQLserver</h3>
-                        <p class="text-xs">متوسط</p>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-database icon"></i>
+                        <p>SQL Server</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>Git</h3>
-                        <p class="text-xs">مبتدئ</p>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-git icon"></i>
+                        <p>Git</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>Python</h3>
-                        <p class="text-xs">مبتدئ</p>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-python icon"></i>
+                        <p>Python</p>
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <h1 class="text-2xl font-bold mb-4">Frontend Development</h1>
-                <div class="grid md:grid-cols-3 gap-20 rounded-lg border border-gray-400 p-5">
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>CSS</h3>
-                        <p class="text-xs">مبتدئ</p>
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4">Frontend Development</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-css3-alt icon"></i>
+                        <p>CSS</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>HTML</h3>
-                        <p class="text-xs">مبتدئ</p>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-html5 icon"></i>
+                        <p>HTML</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>JavaScript</h3>
-                        <p class="text-xs">مبتدئ</p>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-js icon"></i>
+                        <p>JavaScript</p>
                     </div>
-                    <div class="text-center flex flex-col items-center">
-                        <img src="./image/checkmark.png" alt="" class="w-9">
-                        <h3>Tailwindcss</h3>
-                        <p class="text-xs">مبتدئ</p>
-                        </div>
-                        <div class="text-center flex flex-col items-center">
-                            <img src="./image/checkmark.png" alt="" class="w-9">
-                               <h3>Material UI</h3>
-                            <p class="text-xs">مبتدئ</p>
-                        </div>
-                            <div class="text-center flex flex-col items-center">
-                                 <img src="./image/checkmark.png" alt="" class="w-9">
-                                 <h3>TypeScript</h3>
-                                <p class="text-xs">مبتدئ</p>
-                            </div>
-                      </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-solid fa-wand-magic-sparkles icon"></i>
+                        <p>Tailwind CSS</p>
                     </div>
-        </div>
-        </section>
-
-        
-
-    </div>
-    <div class="flex flex-col justify-center md:mt-20 m-5" id="contactme">
-        <h1 class="font-bold text-center">تواصل معي</h1>
-        <div class="flex flex-col md:flex-row items-center gap-1 justify-center rounded-lg border border-gray-300 md:mx-20 my-5 md:my-20 mb-0 p-4">
-            <div class="flex items-center">
-                <img src="image/email.png" alt="email" class="h-10">
-                <p class="ml-2">esmailsaadi@gmail.com</p>
-            </div>
-            <div class="flex items-center mt-2 md:mt-0">
-                <img src="image/email.png" alt="email" class="h-10 mr-2">
-                <a href="https://t.me/trapped133">Telegram: t.me/trapped133</a>
-            </div>
-            <div class="mt-2 md:mt-0 ">
-                <a href="https://www.facebook.com/trappedjr" target="_blank" class="inline-block">
-                    <img src="image/image copy.png" alt="facebook" class="w-8 mr-2">
-                </a>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-sass icon"></i>
+                        <p>SCSS</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fa-brands fa-figma icon"></i>
+                        <p>Figma</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-        
+    <section class="flex flex-col items-center mt-20 p-5" id="contactme">
+        <h2 class="text-3xl font-bold mb-10">تواصل معي</h2>
+        <div class="flex flex-col md:flex-row items-center justify-around gap-4 mt-10 w-full max-w-screen-md p-4 border border-gray-300 rounded-lg">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-xl icon"></i>
+                <p>esmailsaadi@gmail.com</p>
+            </div>
+            <div class="flex items-center gap-2 mt-4 md:mt-0">
+                <i class="fa-brands fa-telegram text-xl icon"></i>
+                <a href="https://t.me/trapped133" target="_blank">Telegram: t.me/trapped133</a>
+            </div>
+            <div class="flex items-center gap-2 mt-4 md:mt-0">
+                <i class="fa-brands fa-facebook text-xl icon"></i>
+                <a href="https://www.facebook.com/trappedjr" target="_blank">Ismael Saadi</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 إسماعيل الساعدي. جميع الحقوق محفوظة.</p>
+    </footer>
+
     <script>
-        function toggleMenu() {
-            var navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('hidden');
-        }
-</script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        });
+    </script>
 </body> 
- 
- 
- 
 </html>
